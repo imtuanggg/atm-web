@@ -1,9 +1,17 @@
 package th.ac.ku.atm.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Customer {
+
+    @Id
     private int id;
     private String name;
     private String pin;
+
+    public Customer(){} //เติมให้ jpa สร้าง object ให้อัตโนมัติ
 
     public Customer(int id, String name, String pin) {
         this.id = id;
